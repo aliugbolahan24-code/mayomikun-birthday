@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mayomikun ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#000000,#1a001a,#ff1493);
+color:white;
+overflow-x:hidden;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.card{
+max-width:900px;
+width:100%;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:25px;
+padding:40px;
+text-align:center;
+box-shadow:0 0 30px rgba(255,20,147,0.4);
+}
+
+h1{
+font-size:4rem;
+color:#ff69b4;
+margin-bottom:10px;
+}
+
+h2{
+margin-bottom:25px;
+}
+
+.photo{
+width:300px;
+max-width:100%;
+border-radius:20px;
+border:4px solid #ff69b4;
+box-shadow:0 0 25px rgba(255,105,180,.5);
+margin:25px auto;
+display:block;
+}
+
+.message{
+font-size:1.1rem;
+line-height:2;
+margin-top:20px;
+}
+
+footer{
+margin-top:30px;
+color:#ffcce6;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:24px;
+color:#ff69b4;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+
+@media(max-width:768px){
+h1{
+font-size:2.7rem;
+}
+.card{
+padding:25px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<h1>Mayomikun ❤️</h1>
+
+<h2>Happy Birthday My Baby Love</h2>
+
+<img src="mayomikun.jpg" alt="Mayomikun" class="photo">
+
+<div class="message">
+Happy Birthday to the most amazing girl in my life ❤️<br><br>
+
+My own Ayoski, my favorite person and one of the best things that ever happened to me.<br><br>
+
+Every moment spent with you feels special and beautiful. On this special day, I pray that joy, love, strength,success and endless blessings never depart from your life.<br><br>
+
+Thank you for being sweet, caring and wonderful in every way you can.<br><br>
+
+I love you sweetie! ❤️
+</div>
+
+<footer>
+Made with love by your favorite person Alayinde ❤️
+</footer>
+
+</div>
+
+<audio id="music" loop>
+<source src="young-jonn-go-shawty-its-your-birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.body.addEventListener("click",()=>{
+document.getElementById("music").play();
+},{once:true});
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*20)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+}
+
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
